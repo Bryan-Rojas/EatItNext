@@ -9,3 +9,8 @@ Introduction to software engineering project using Django. Our project is aimed 
 * Shivam Gupta
 * Steven Johnson
 
+## Getting Started
+
+```
+pip install -r requirements.txt
+```
