@@ -5,9 +5,7 @@ Introduction to software engineering project using Django. Our project is aimed 
 ## Contributors
 
 * Bryan Rojas
-* Priyanshi Vaishnav
-* Shivam Gupta
-* Steven Johnson
+
 
 ## Getting Started
 
