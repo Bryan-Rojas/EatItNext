@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from django.views.generic import TemplateView
 
 # Create your views here.
@@ -11,5 +10,5 @@ class HomePageView(TemplateView):
 class BlogView(TemplateView):
     template_name = 'blog.html'
 
-def aboutUsView(request):
-    return HttpResponse('<h1 style="color: red;">ABOUT US</h1>')
+class AboutUsView(TemplateView):
+    template_name = 'about-us.html'
