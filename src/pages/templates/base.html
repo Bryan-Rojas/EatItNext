@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+    <head>
+        <title>MealRobot (Automatic Meal Planning)</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    </head>
+    <body>
+        <header>
+            {% block nav %}
+                {% include 'nav.html' %}
+            {% endblock %}
+        </header>
+            {% block content %}
+            {% endblock %}
+        <footer>
+            {% block footer %}
+            {% endblock footer %}
+        </footer>
+    </body>
+</html>
