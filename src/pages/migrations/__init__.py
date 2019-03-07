@@ -1,0 +1,1 @@
+# migrations/ keeps track of any changes to our models.py file so our database and models.py stay in sync
