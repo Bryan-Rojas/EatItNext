@@ -1,8 +1,14 @@
 body {
-    background-color: hsl(167, 81%, 69%) !important;
+    background-color: #c94f44 !important;
 }
 
 #content {
     margin-top: 50px;
-    background-color: hsl(167, 81%, 69%) !important;
+    background-color: #c94f44 !important;
+}
+
+
+#currentPageInNav{
+    color: white !important;
+    font-weight: 500;
 }
