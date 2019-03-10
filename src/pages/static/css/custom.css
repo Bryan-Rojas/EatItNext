@@ -1,14 +1,41 @@
-body {
-    background-color: #c94f44 !important;
+.navbar-brand:focus{
+    border-bottom: 4px solid white;
+}
+
+.navbar-brand:hover{
+    color: rgb(85, 187, 255) !important;
+}
+
+.nav-link:focus{
+    border-bottom: 4px solid white;
+}
+
+.nav-link:hover{
+    color: rgb(85, 187, 255) !important;
 }
 
 #content {
-    margin-top: 50px;
-    background-color: #c94f44 !important;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
 }
 
+#banner{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url("../img/home-banner.jpg");
+}
 
 #currentPageInNav{
-    color: white !important;
+    color: rgb(85, 187, 255) !important;
     font-weight: 500;
+}
+
+#currentPageInNav:hover{
+    color: #e5e5e5 !important;
+    font-weight: 500;
+}
+
+#intro-paragraph{
+    line-height: 2.3em;
 }

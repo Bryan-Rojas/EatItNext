@@ -4145,7 +4145,7 @@ input[type="button"].btn-block {
 }
 
 .navbar {
-  background-color: #c94f44;
+  background-color: #313131;
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -4171,7 +4171,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-brand {
-  color: #ecf0f1;
+  color: white !important;
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
@@ -4196,9 +4196,9 @@ input[type="button"].btn-block {
 }
 
 .navbar-nav .nav-link {
-  color: #ecf0f1;
-  padding-right: 0;
-  padding-left: 0;
+  color: white !important;
+  padding-right: 0.7em !important;
+  padding-left: 0.7em !important;
 }
 
 .navbar-nav .dropdown-menu {
