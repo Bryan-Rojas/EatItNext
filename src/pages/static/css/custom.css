@@ -14,10 +14,18 @@
     color: rgb(85, 187, 255) !important;
 }
 
+.footer-link:focus{
+    border-bottom: 4px solid black;
+}
+
+.footer-link:hover{
+    color: #181818 !important;
+    text-decoration: none;
+}
+
 #content {
     padding-top: 50px;
     padding-bottom: 50px;
-
 }
 
 #banner{
@@ -38,4 +46,19 @@
 
 #intro-paragraph{
     line-height: 2.3em;
+}
+
+#copyright{
+    color: #888888;
+    padding-bottom: 50px;
+}
+
+#footer{
+    color: #888888;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+footer{
+    background-color: #f2f2f2;
 }

@@ -1,5 +1,43 @@
 {% load static %}
 
 <div class="container">
-    about us
+    <div class="row" id="footer">
+        <div class="col-md-4">
+            
+            <a class="footer-link" href="{% url 'about-us' %}">About Us</a><br/>
+
+            <a class="footer-link" href="{% url 'blog' %}">Blog</a><br/>
+
+            <a class="footer-link" href="https://drive.google.com/drive/u/3/folders/1Zm1IDr43fVs0lp2R2DxH2Z61vYhYsHz7">Project Docs</a><br/>
+        </div>
+
+        <div class="col-md-4">
+            <a class="footer-link" href="{% url 'home' %}">Legal</a><br/>
+
+            <a class="footer-link" href="{% url 'home' %}">Terms of Use</a><br/>
+
+            <a class="footer-link" href="{% url 'home' %}">Privacy Policy</a><br/>
+        
+            <a class="footer-link" href="{% url 'home' %}">Credits</a><br/>
+        </div>
+
+        <div class="col-md-4">
+            <a class="footer-link" href="{% url 'home' %}"><i class="fab fa-facebook-square"></i> Facebook</a><br/>
+
+            <a class="footer-link" href="{% url 'home' %}"><i class="fab fa-twitter-square"></i> Twitter</a><br/>
+
+            <a class="footer-link" href="{% url 'home' %}"><i class="fab fa-instagram"></i> Instagram</a><br/>
+
+            <a class="footer-link" href="{% url 'home' %}"><i class="far fa-envelope"></i> Email</a><br/>
+        </div>
+    </div>
+
+    <div class="row" id="copyright">
+        <div class="col">
+            <center>
+                Copyright © 2019 RGJV Inc. All rights reserved.
+            </center>
+        </div>
+    </div>
+
 </div>
