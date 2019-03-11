@@ -1,3 +1,8 @@
+footer{
+    background-color: #f2f2f2;
+    border-top: 1px solid rgb(177, 177, 177);
+}
+
 .navbar-brand:focus{
     border-bottom: 4px solid white;
 }
@@ -63,11 +68,14 @@
     padding-bottom: 50px;
 }
 
-footer{
-    background-color: #f2f2f2;
+@media(min-width: 768px){
+    #footer-border{
+        border-right: 1px solid rgb(177, 177, 177);
+    }
 }
 
-#footer-border{
-    border-right: 1px solid rgb(177, 177, 177);
-    
+@media(max-width: 768px){
+    #footer{
+        text-align: center;
+    }
 }
