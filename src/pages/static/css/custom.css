@@ -28,8 +28,10 @@ footer{
     text-decoration: none;
 }
 
-.left-pad{
-    padding-left: 2em;
+@media(min-width: 768px){
+    .left-pad{
+        padding-left: 3em;
+    }
 }
 
 #content {
@@ -77,5 +79,15 @@ footer{
 @media(max-width: 768px){
     #footer{
         text-align: center;
+    }
+}
+
+@media(max-width: 767px){
+    .col-md-4{
+        width: 50%;
+    }
+    .center-col{
+        padding-top: 2em;
+        width: 100%;
     }
 }
