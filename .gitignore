@@ -1,6 +1,6 @@
 
-src/pages/__pycache__/.*
-src/pages/migrations/__pycache__/.*
+src/pages/__pycache__/*
+src/pages/migrations/__pycache__/*
 src/mealrobot/secret_settings.py
-src/mealrobot/__pycache__/.*
-
+src/mealrobot/__pycache__/*
+src/
