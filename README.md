@@ -3,7 +3,7 @@ Introduction to software engineering project using Django. Our project is aimed 
 
 ## Preview
 
-![MealRobot Demo GIF](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "MealRobot Demo GIF")
+![MealRobot Demo GIF](https://raw.githubusercontent.com/Bryan-Rojas/MealRobot/master/src/pages/static/img/favicon.ico "MealRobot Demo GIF")
 
 ## Prerequisites
 
