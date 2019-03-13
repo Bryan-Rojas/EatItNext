@@ -3,7 +3,7 @@ Introduction to software engineering project using Django. Our project is aimed 
 
 ## Preview
 
-![EatItNext iPhone Demo](https://raw.githubusercontent.com/Bryan-Rojas/MealRobot/master/src/pages/static/img/favicon.ico "EatItNext Demo")
+![EatItNext iPhone Demo](iphone_preview.png "EatItNext Demo")
 
 ## Prerequisites
 
