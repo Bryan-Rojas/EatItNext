@@ -1,5 +1,5 @@
 """
-WSGI config for mealrobot project.
+WSGI config for eatitnext project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mealrobot.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'eatitnext.settings')
 
 application = get_wsgi_application()

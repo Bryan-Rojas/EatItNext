@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'mealrobot.urls'
+ROOT_URLCONF = 'eatitnext.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mealrobot.wsgi.application'
+WSGI_APPLICATION = 'eatitnext.wsgi.application'
 
 
 # Database

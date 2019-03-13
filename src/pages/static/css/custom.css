@@ -13,6 +13,7 @@ footer{
 
 .nav-link:focus{
     border-bottom: 4px solid white;
+    color: rgb(85, 187, 255) !important;
 }
 
 .nav-link:hover{
@@ -21,6 +22,7 @@ footer{
 
 .footer-link:focus{
     border-bottom: 4px solid black;
+    color: black !important;
 }
 
 .footer-link:hover{
