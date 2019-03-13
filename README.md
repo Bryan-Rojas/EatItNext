@@ -3,7 +3,7 @@ Introduction to software engineering project using Django. Our project is aimed 
 
 ## Preview
 
-![EatItNext iPhone Demo](iphone_preview.png "EatItNext Demo")
+![EatItNext iPhone Demo](iphone_preview.png =300x609 "EatItNext Demo")
 
 ## Prerequisites
 
