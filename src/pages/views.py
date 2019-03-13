@@ -12,3 +12,6 @@ class BlogView(TemplateView):
 
 class AboutUsView(TemplateView):
     template_name = 'about-us.html'
+
+class CreditsView(TemplateView):
+    template_name = 'credits.html'
