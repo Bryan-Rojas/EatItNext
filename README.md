@@ -1,9 +1,9 @@
-# MealRobot
+# EatItNext
 Introduction to software engineering project using Django. Our project is aimed towards developing an accessible website where users can generate a meal plan for the day based on their dietary preference.
 
 ## Preview
 
-![MealRobot Demo GIF](https://raw.githubusercontent.com/Bryan-Rojas/MealRobot/master/src/pages/static/img/favicon.ico "MealRobot Demo GIF")
+<img src="https://raw.githubusercontent.com/Bryan-Rojas/MealRobot/master/iphone_preview.png" height="609" width="300">
 
 ## Prerequisites
 
