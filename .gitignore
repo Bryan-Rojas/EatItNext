@@ -3,3 +3,4 @@ src/pages/__pycache__/*
 src/pages/migrations/__pycache__/*
 src/eatitnext/secret_settings.py
 src/eatitnext/__pycache__/*
+src/pages/migrations/__pycache__/*
