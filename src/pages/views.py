@@ -15,3 +15,16 @@ class AboutUsView(TemplateView):
 
 class CreditsView(TemplateView):
     template_name = 'credits.html'
+
+class ProjectDocumentView(TemplateView):
+    template_name = 'project-docs.html'
+
+class LegalView(TemplateView):
+    template_name = 'legal.html'
+
+class TermsOfServiceView(TemplateView):
+    template_name = 'tos.html'
+
+class PrivacyPolicyView(TemplateView):
+    template_name = 'privacy.html'
+    
