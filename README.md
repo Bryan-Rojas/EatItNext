@@ -1,6 +1,17 @@
 # EatItNext
 Introduction to software engineering project using Django. Our project is aimed towards developing an accessible website where users can generate a meal plan for the day based on their dietary preference.
 
+##To-do List
+* Fix Bootstrap JavaScript CDN Issue
+* Fix Radio Buttons
+* Add background
+* Work on Algoritm
+* Work on ResultView
+* API Calls & JSON parsing
+* Fix Footer Company Name
+* Calorie Calculator Algortihm
+* CalorieCalcView
+
 ## Preview
 
 <img src="https://raw.githubusercontent.com/Bryan-Rojas/MealRobot/master/iphone_preview.png" height="609" width="300">
