@@ -28,3 +28,5 @@ class TermsOfServiceView(TemplateView):
 class PrivacyPolicyView(TemplateView):
     template_name = 'privacy.html'
     
+class CalorieCalcView(TemplateView):
+    template_name = 'calorie.html'
