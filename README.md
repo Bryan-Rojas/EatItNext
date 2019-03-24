@@ -10,7 +10,7 @@ Introduction to software engineering project using Django. Our project is aimed 
 * API Calls & JSON parsing
 * Fix Footer Company Name
 * Calorie Calculator Algortihm
-* CalorieCalcView
+* Switch from EB to EC2 Ubuntu instance
 
 ## Preview
 
