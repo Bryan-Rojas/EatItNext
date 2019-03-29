@@ -12,4 +12,5 @@ urlpatterns = [
     path('privacy-policy/', PrivacyPolicyView.as_view(), name='privacy-policy'),
     path('credits/', CreditsView.as_view(), name='credits'),
     path('calorie-calc/', CalorieCalcView.as_view(), name='calorie-calc'),
-]
+    path('results/', ResultView.as_view(), name='result-view'),
+ ]

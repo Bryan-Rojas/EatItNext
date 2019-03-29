@@ -21,6 +21,7 @@
                     <h3 style="font-size: unset; font-size: 1.2em;">Automatic Meal Planner</h3>
                 </div>
                 <div class="card-body">
+<!--
                     <div class="btn-group" data-toggle="buttons">
                         <label class="btn">
                             <input type="radio" name="options" id="option1" checked> Any
@@ -47,18 +48,25 @@
                         </label>
                     </div>
                     <br/>
+-->
 
-                    <div class="form-group row">
-                        <div class="col-md-2">
-                            <label for="exampleFormControlInput1">Calories</label>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+<!--
+                        <div class="form-group row">
+                            <div class="col-md-2">
+                                <label for="exampleFormControlInput1">Calories</label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Not Sure? Use our Calorie Calculator">
+                            </div>
                         </div>
-                        <div class="col-md-10">
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Not Sure? Use our Calorie Calculator">
-                        </div>
-                    </div>
+-->
+                        <button type="submit" class="btn btn-primary">Generate Meal Plan</button>
+               
+                    </form>
 
-                    <br/>
-                    <a href="#" class="btn btn-primary">Generate Meal Plan</a>
                 </div>
                 </div>
             </div>
@@ -67,6 +75,7 @@
             </div>
         </div>
 
-
+{{ diet }} <br/> 
+{{ cal }}
 
 {% endblock content %}
