@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from .forms import MealPlanForm
+from .mealplanner import randomMealPlan
+import json
+
 # Create your views here.
 # views.py is where we handle the request/response logic for our web app
 
@@ -9,7 +12,11 @@ class HomePageView(TemplateView):
 
     def get(self, request):
         form = MealPlanForm()
-        return render(request, self.template_name, {'form': form})
+        args = {
+            'form': form,
+            'null': True,
+        }
+        return render(request, self.template_name, args)
 
     def post(self, request):
         form = MealPlanForm(request.POST)
@@ -17,13 +24,11 @@ class HomePageView(TemplateView):
             diet = form.cleaned_data['diet']
             calories = form.cleaned_data['calories']
 
-        args = {
-            'form': form,
-            'diet': diet,
-            'cal': calories
-        }
+        args = randomMealPlan(str(diet), int(calories))
+        args['form'] = form
+        args['null'] = False
 
-        return render(request, ResultView.template_name, args)
+        return render(request, self.template_name, args)
 
 class BlogView(TemplateView):
     template_name = 'blog.html'
@@ -48,6 +53,3 @@ class PrivacyPolicyView(TemplateView):
     
 class CalorieCalcView(TemplateView):
     template_name = 'calorie.html'
-
-class ResultView(TemplateView):
-    template_name = 'result.html'

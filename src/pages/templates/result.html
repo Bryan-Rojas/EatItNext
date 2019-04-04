@@ -1,6 +1,46 @@
-{% extends 'base.html' %}
+<hr/>
 
-{% block content %}
-<strong>Results...</strong>
-{{diet}} meal plan. That is around {{cal}} calories.
-{% endblock content %}
+<div class="row">
+        <div class="col-md-1">
+        </div>
+
+        <div class="col-md-10">
+            <div class="card">
+
+                <div class="card-header">
+                    <h3 style="font-size: unset; font-size: 1.2em;">Meal Plan</h3>
+                </div>
+
+                <div class="card-body">
+                    <strong>Breakfast:</strong> <br/>
+                    <ul>                    
+                        <li>Item: {{breakfast.title}}</li>
+                        <li>Calories: {{breakfast.calories}}</li>
+                    </ul>
+
+                    <strong>Lunch:</strong> <br/>
+                    <ul>                    
+                        <li>Item: {{lunch.title}}</li>
+                        <li>Calories: {{lunch.calories}}</li>
+                    </ul>
+
+                    <strong>Dinner:</strong> <br/>
+                    <ul>                    
+                        <li>Item: {{dinner.title}}</li>
+                        <li>Calories: {{dinner.calories}}</li>
+                    </ul>
+
+                    <strong>Snack(s):</strong> <br/>
+                    <ul>                    
+                        <li>Item: {{snack.title}}</li>
+                        <li>Calories: {{snack.calories}}</li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-1">
+        </div>
+</div>

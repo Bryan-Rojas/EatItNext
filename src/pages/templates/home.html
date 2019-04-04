@@ -72,10 +72,13 @@
             </div>
 
             <div class="col-md-1">
+            
             </div>
         </div>
 
-{{ diet }} <br/> 
-{{ cal }}
+        {% if null != True %}
+            {% include "result.html" %}
+        {% endif %}
+
 
 {% endblock content %}
