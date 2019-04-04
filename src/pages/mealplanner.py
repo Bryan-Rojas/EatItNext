@@ -17,5 +17,5 @@ def randomMealPlan(diet_type: 'string', calories_wanted: 'int') -> '{}':
                 'calories': 50000
             }
     }
-
+    
     return anyMeal

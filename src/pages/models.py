@@ -6,5 +6,4 @@ from django.db import models
 
 class MealPlan(models.Model):
     title = models.CharField(max_length = 75)
-    description = models.TextField(blank = True, null = True)
     calories = models.IntegerField()

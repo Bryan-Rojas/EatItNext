@@ -27,6 +27,8 @@ class HomePageView(TemplateView):
         args = randomMealPlan(str(diet), int(calories))
         args['form'] = form
         args['null'] = False
+        args['diet'] = diet
+        args['calories_wanted'] = calories
 
         return render(request, self.template_name, args)
 
