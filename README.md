@@ -16,8 +16,8 @@ Introduction to software engineering project using Django. Our project is aimed 
 
 ## Preview
 
-<img src="https://raw.githubusercontent.com/Bryan-Rojas/MealRobot/master/iphone_preview.png" height="609" width="300">
-<img src="https://raw.githubusercontent.com/Bryan-Rojas/MealRobot/master/iphone_preview_2.png" height="609" width="300">
+<img src="https://raw.githubusercontent.com/Bryan-Rojas/EatItNext/master/iphone_preview.png" height="609" width="300">
+<img src="https://raw.githubusercontent.com/Bryan-Rojas/EatItNext/master/iphone_preview_2.png" height="609" width="300">
 
 ## Prerequisites
 
