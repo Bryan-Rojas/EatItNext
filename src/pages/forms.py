@@ -22,6 +22,7 @@ class CalorieCalcForm(forms.Form):
     genders = (
         ('Female', 'female'),
         ('Male', 'male'),
+        ('Other', 'other'),
     )
     age = forms.IntegerField()
     gender = forms.ChoiceField(choices = genders)
