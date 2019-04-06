@@ -17,3 +17,11 @@ class MealPlanForm(forms.Form):
             MinValueValidator(1200)
         ]
     )
+
+class CalorieCalcForm(forms.Form):
+    genders = (
+        ('Female', 'female'),
+        ('Male', 'male'),
+    )
+    age = forms.IntegerField()
+    gender = forms.RadioSelect(choices = genders)

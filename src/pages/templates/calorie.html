@@ -2,4 +2,21 @@
 
 {% block content %}
 <strong>CALORIES food...</strong>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+<!--
+    <div class="form-group row">
+        <div class="col-md-2">
+            <label for="exampleFormControlInput1">Calories</label>
+        </div>
+        <div class="col-md-10">
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Not Sure? Use our Calorie Calculator">
+        </div>
+    </div>
+-->
+    <button type="submit" class="btn btn-primary">Calculate</button>
+
+</form>
 {% endblock content %}

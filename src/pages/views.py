@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-from .forms import MealPlanForm
+from .forms import MealPlanForm, CalorieCalcForm
 from .mealplanner import randomMealPlan
 import json
 
@@ -55,3 +55,12 @@ class PrivacyPolicyView(TemplateView):
     
 class CalorieCalcView(TemplateView):
     template_name = 'calorie.html'
+
+    def get(self, request):
+        form = CalorieCalcForm()
+        args = {
+            'form': form,
+            'null': True,
+        }
+
+        return render(request, self.template_name, args)
