@@ -1,3 +1,4 @@
+
 footer{
     background-color: #f2f2f2;
     border-top: 1px solid rgb(177, 177, 177);
@@ -44,7 +45,6 @@ footer{
 #banner{
     padding-top: 50px;
     padding-bottom: 50px;
-    background-image: url("../img/home-banner.jpg");
 }
 
 #currentPageInNav{
