@@ -24,4 +24,4 @@ class CalorieCalcForm(forms.Form):
         ('Male', 'male'),
     )
     age = forms.IntegerField()
-    gender = forms.RadioSelect(choices = genders)
+    gender = forms.ChoiceField(choices = genders)
