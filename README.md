@@ -4,7 +4,6 @@ Introduction to software engineering project using Django. Our project is aimed 
 ## To-do List
 * Fix Bootstrap JavaScript CDN Issue
 * Fix Radio Buttons
-* Add Background image
 * Add Content
 * Create contact@eatitnext.com mail
 * Work on Algoritm
