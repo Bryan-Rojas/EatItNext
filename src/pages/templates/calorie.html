@@ -19,4 +19,8 @@
     <button type="submit" class="btn btn-primary">Calculate</button>
 
 </form>
+
+        {% if null != True %}
+            {% include "cal-result.html" %}
+        {% endif %}
 {% endblock content %}

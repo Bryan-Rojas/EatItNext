@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from .forms import MealPlanForm, CalorieCalcForm
 from .mealplanner import randomMealPlan
+from .calcalc import calorieCalulator
 import json
 
 # Create your views here.
@@ -62,5 +63,18 @@ class CalorieCalcView(TemplateView):
             'form': form,
             'null': True,
         }
+
+        return render(request, self.template_name, args)
+
+    def post(self, request):
+        form = CalorieCalcForm(request.POST)
+        if form.is_valid():
+            age = form.cleaned_data['age']
+            gender = form.cleaned_data['gender']
+
+        args = calorieCalulator(int(age), str(gender), 12, 5)
+
+        args['form'] = form
+        args['null'] = False
 
         return render(request, self.template_name, args)
