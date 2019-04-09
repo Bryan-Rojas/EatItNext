@@ -30,6 +30,11 @@ class HomePageView(TemplateView):
         args['null'] = False
         args['diet'] = diet
         args['calories_wanted'] = calories
+        if calories >= 400 and calories <= 7200:
+            args['valid'] = True
+        else:
+            args['valid'] = False
+            args['calories_invalid'] = True
 
         return render(request, self.template_name, args)
 

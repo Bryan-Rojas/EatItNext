@@ -21,48 +21,23 @@
                     <h3 style="font-size: unset; font-size: 1.2em;">Automatic Meal Planner</h3>
                 </div>
                 <div class="card-body">
-<!--
-                    <div class="btn-group" data-toggle="buttons">
-                        <label class="btn">
-                            <input type="radio" name="options" id="option1" checked> Any
-                        </label>
-                        
-                        <label class="btn">
-                            <input type="radio" name="options" id="option2"> Vegan
-                        </label>
-                        
-                        <label class="btn">
-                            <input type="radio" name="options" id="option3"> Vegetarian
-                        </label>
 
-                        <label class="btn">
-                            <input type="radio" name="options" id="option4"> Paleo
-                        </label>
-
-                        <label class="btn">
-                            <input type="radio" name="options" id="option5"> Mediterranean
-                        </label>
-
-                        <label class="btn">
-                            <input type="radio" name="options" id="option5"> Ketogenic
-                        </label>
-                    </div>
+                {% if valid == False %}
+                    <span style="color: red;">
+                    <strong>Errors:</strong><br/>
+                    <ul>
+                    {% if calories_invalid == True %}
+                    <li>Invalid amount of calories, please choose a value between 400 to 7200 calories.</li>
+                    {% endif %}
+                    </ul>
+                    </span>
                     <br/>
--->
+                {% endif %}
 
                     <form method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
-<!--
-                        <div class="form-group row">
-                            <div class="col-md-2">
-                                <label for="exampleFormControlInput1">Calories</label>
-                            </div>
-                            <div class="col-md-10">
-                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Not Sure? Use our Calorie Calculator">
-                            </div>
-                        </div>
--->
+
                         <button type="submit" class="btn btn-primary">Generate Meal Plan</button>
                
                     </form>
@@ -76,7 +51,7 @@
             </div>
         </div>
 
-        {% if null != True %}
+        {% if null != True and valid == True %}
             {% include "result.html" %}
         {% endif %}
 

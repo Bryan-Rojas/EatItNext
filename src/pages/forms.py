@@ -11,12 +11,7 @@ class MealPlanForm(forms.Form):
         ('Ketogenic', 'ketogenic'),
     )
     diet = forms.ChoiceField(choices = diet_prefs_options)
-    calories = forms.IntegerField(
-        validators = [
-            MaxValueValidator(5000),
-            MinValueValidator(1200)
-        ]
-    )
+    calories = forms.IntegerField()
 
 class CalorieCalcForm(forms.Form):
     genders = (
