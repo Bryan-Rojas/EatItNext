@@ -7,7 +7,6 @@ class MealPlanForm(forms.Form):
         ('Vegan', 'Vegan'),
         ('Vegetarian', 'Vegetarian'),
         ('Paleo', 'Paleo'),
-        ('Miditerranean', 'Miditerranean'),
         ('Ketogenic', 'Ketogenic'),
     )
 
