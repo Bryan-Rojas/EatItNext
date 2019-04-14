@@ -9,6 +9,8 @@ Introduction to software engineering project using Django. Our project is aimed 
 * Create contact@eatitnext.com mail
 * Work on Meal Plan Algorithm
 * Work on Calorie Calculator Algorithm
+* Add Screen Reader skip
+* Accessibility
 * Fix Footer Company Name
 * Switch from EB to EC2 Ubuntu instance
 
