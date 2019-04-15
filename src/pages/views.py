@@ -30,7 +30,7 @@ class HomePageView(TemplateView):
         args['null'] = False
         args['diet'] = diet
         args['calories_wanted'] = calories
-        if calories >= 400 and calories <= 7200:
+        if calories >= 800 and calories <= 5200:
             args['valid'] = True
         else:
             args['valid'] = False
