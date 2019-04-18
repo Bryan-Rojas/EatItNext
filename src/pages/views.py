@@ -76,8 +76,14 @@ class CalorieCalcView(TemplateView):
         if form.is_valid():
             age = form.cleaned_data['age']
             gender = form.cleaned_data['gender']
+            weight = form.cleaned_data['weight']
+            height_ft = form.cleaned_data['height_ft']
+            height_in = form.cleaned_data['height_in']
+            exercise_level = form.cleaned_data['exercise_level']
+            goal = form.cleaned_data['goal']
 
-        args = calorieCalulator(int(age), str(gender), 12, 5)
+        #age, gender, weight, height_ft, height_in, activity_level, goal
+        args = calorieCalulator(int(age), str(gender), int(weight), int(height_ft), int(height_in), str(exercise_level), str(goal))
 
         args['form'] = form
         args['null'] = False
