@@ -40,11 +40,11 @@ def veganDiet(calories_wanted: 'int') -> {}:
                 'calories': 700
             },
             'lunch': {
-                'title': 'Mac and Cheese',
+                'title': 'Vegan Mac and Cheese',
                 'calories': 600
             },
             'dinner': {
-                'title': 'Sirloin Steak',
+                'title': 'Vegan Steak',
                 'calories': 1200
             },
             'snack': {

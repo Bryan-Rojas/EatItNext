@@ -1,11 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<strong>Our calorie form does not currently support kg/cm.<br/><br/></strong>
+<div class="row">
+    <div class="col-md-1">
+    </div>
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
+    <div class="col-md-10">
+        <div class="card">
+            <div class="card-header">
+                <h3 style="font-size: unset; font-size: 1.2em;">Calorie Calculator</h3>
+            </div>
+
+            <div class="card-body">
+
+                    <strong>Our calorie form does not currently support kg/cm.<br/><br/></strong>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">Calculate</button>
+                    </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-1">
+    </div>
+    
+</div>
 <!--
     <div class="form-group row">
         <div class="col-md-2">
@@ -16,9 +38,7 @@
         </div>
     </div>
 -->
-    <button type="submit" class="btn btn-primary">Calculate</button>
 
-</form>
 
         {% if null != True %}
             {% include "cal-result.html" %}
