@@ -52,6 +52,9 @@ def calorieCalulator(age, gender, weight, height_ft, height_in, activity_level, 
     if goal == 'Lose':
         calories = activity_level - 500
 
+    if goal == 'None':
+        calories = activity_level
+
     if goal == 'Gain':
         calories = activity_level + 500
         

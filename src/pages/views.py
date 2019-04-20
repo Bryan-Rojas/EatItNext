@@ -82,8 +82,17 @@ class CalorieCalcView(TemplateView):
             exercise_level = form.cleaned_data['exercise_level']
             goal = form.cleaned_data['goal']
 
+        args = {}
+
+        #make function dummie
+        if weight >= 20 and weight <= 800:
+            args['valid'] = True
+            args = calorieCalulator(int(age), str(gender), int(weight), int(height_ft), int(height_in), str(exercise_level), str(goal))
+        else:
+            args['valid'] = False
+
         #age, gender, weight, height_ft, height_in, activity_level, goal
-        args = calorieCalulator(int(age), str(gender), int(weight), int(height_ft), int(height_in), str(exercise_level), str(goal))
+        #args = calorieCalulator(int(age), str(gender), int(weight), int(height_ft), int(height_in), str(exercise_level), str(goal))
 
         args['form'] = form
         args['null'] = False
