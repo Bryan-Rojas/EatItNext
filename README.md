@@ -4,14 +4,12 @@ Introduction to software engineering project using Django. Our project is aimed 
 ## To-do List
 * Fix Bootstrap JavaScript CDN Issue
 * Fix Radio Buttons
-* Different background
 * Add Content
 * Create contact@eatitnext.com mail
 * Work on Meal Plan Algorithm
-* Work on Calorie Calculator Algorithm
+* Calorie Calculator Algorithm Validation
 * Add Screen Reader skip
 * Accessibility
-* Fix Footer Company Name
 * Switch from EB to EC2 Ubuntu instance
 
 ## Preview
