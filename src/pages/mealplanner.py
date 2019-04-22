@@ -1,3 +1,5 @@
+from random import randint
+
 def randomMealPlan(diet_type: 'string', calories_wanted: 'int') -> '{}':
     mealPlanType = {
         'Any': anyDiet,
@@ -10,11 +12,29 @@ def randomMealPlan(diet_type: 'string', calories_wanted: 'int') -> '{}':
     return mealPlanType[diet_type](calories_wanted)
 
 def anyDiet(calories_wanted: 'int') -> {}:
+    breakfastOptions = {}
+    lunchOptions = {}
+    dinnerOptions = {}
+    snackOptions = {}
+
+    breakfastOptions['Green Eggs & Ham'] = 700
+    breakfastOptions['Waffles'] = 400
+    breakfastOptions['Ham & Cheese Sandwich'] = 500
+    breakfastOptions['Fruity Pebbles Cereal'] = 350
+    lunchOptions['Chicken Strips'] = 700
+    lunchOptions['Ramen'] = 400
+    dinnerOptions['Chicken Alfredo'] = 800
+    snackOptions['Fruit Roll Up'] = 250
+
+    breakfastKeys = list(breakfastOptions.keys())
+
+    randomBreakfastNum = randint(0, len(breakfastOptions)-1)
+    randomBreakfastKey = breakfastKeys[randomBreakfastNum]
 
     anyMeal = {
             'breakfast': {
-                'title': 'Green Eggs & Ham',
-                'calories': 700
+                'title': randomBreakfastKey,
+                'calories': breakfastOptions[randomBreakfastKey]
             },
             'lunch': {
                 'title': 'Mac and Cheese',
