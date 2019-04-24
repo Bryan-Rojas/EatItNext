@@ -12,3 +12,7 @@ src/pages/migrations/__pycache__/*
 
 #Virtual Env
 eb-virt/
+
+src/static
+
+web.config
