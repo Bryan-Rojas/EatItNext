@@ -108,7 +108,7 @@ def anyDiet(calories_wanted: 'int') -> {}:
             'snack': {
                 'title': options[random_s][0],
                 'calories': int(options[random_s][1]),
-                'image': int(options[random_s][2]),
+                'image': options[random_s][2],
                 'fat': int(options[random_s][3]),
                 'carbs': int(options[random_s][4]),
                 'protein': int(options[random_s][5])
