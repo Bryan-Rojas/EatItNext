@@ -44,7 +44,15 @@ def anyDiet(calories_wanted: 'int') -> {}:
     index = 0
 
     for x in data['hits']:
-        options[index] = [x['recipe']['label'], x['recipe']['calories']/x['recipe']['yield'], x['recipe']['image']]
+        options[index] = [
+            x['recipe']['label'], 
+            x['recipe']['calories']/x['recipe']['yield'], 
+            x['recipe']['image'],
+            x['recipe']['totalNutrients']['FAT']['quantity']/x['recipe']['yield'],
+            x['recipe']['totalNutrients']['CHOCDF']['quantity']/x['recipe']['yield'],
+            x['recipe']['totalNutrients']['PROCNT']['quantity']/x['recipe']['yield']
+            ]
+
         index = index + 1
 
     randomNums = set()
@@ -75,22 +83,35 @@ def anyDiet(calories_wanted: 'int') -> {}:
             'breakfast': {
                 'title': options[random_b][0],
                 'calories': int(options[random_b][1]),
-                'image': options[random_b][2]
+                'image': options[random_b][2],
+                'fat': int(options[random_b][3]),
+                'carbs': int(options[random_b][4]),
+                'protein': int(options[random_b][5])
             },
             'lunch': {
                 'title': options[random_l][0],
                 'calories': int(options[random_l][1]),
-                'image': options[random_l][2]
+                'image': options[random_l][2],
+                'fat': int(options[random_l][3]),
+                'carbs': int(options[random_l][4]),
+                'protein': int(options[random_l][5])
+
             },
             'dinner': {
                 'title': options[random_d][0],
                 'calories': int(options[random_d][1]),
-                'image': options[random_d][2]
+                'image': options[random_d][2],
+                'fat': int(options[random_d][3]),
+                'carbs': int(options[random_d][4]),
+                'protein': int(options[random_d][5])
             },
             'snack': {
                 'title': options[random_s][0],
                 'calories': int(options[random_s][1]),
-                'image': options[random_s][2]
+                'image': int(options[random_s][2]),
+                'fat': int(options[random_s][3]),
+                'carbs': int(options[random_s][4]),
+                'protein': int(options[random_s][5])
             }
     }
     
