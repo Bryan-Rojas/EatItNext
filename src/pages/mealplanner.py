@@ -23,22 +23,21 @@ def anyDiet(calories_wanted: 'int') -> {}:
     max = (calories_wanted // 4) + 20
 
     range = str(min) + '-' + str(max)
+    try:
+        response = requests.get(
+            url,
+            params={'q': '',                # Word filter, blank gets all.
+                    'calories': range,  # Calorie range, can also be an exact int.
+                    #'health': 'paleo',      # Health is basically "diet type"
+                    'diet': 'balanced',     # Balanced makes sure the call gets real food.
+                    'from': 0,              # With queries that have many hits from - to
+                    'to': 40,               # returns the results in that range.
+                    'app_id': user,         
+                    'app_key': key}
+        )
 
-    response = requests.get(
-        url,
-        params={'q': '',                # Word filter, blank gets all.
-                'calories': range,  # Calorie range, can also be an exact int.
-                #'health': 'paleo',      # Health is basically "diet type"
-                'diet': 'balanced',     # Balanced makes sure the call gets real food.
-                'from': 0,              # With queries that have many hits from - to
-                'to': 40,               # returns the results in that range.
-                'app_id': user,         
-                'app_key': key}
-    )
-
-    data = response.json()
-
-    if not data:
+        data = response.json()
+    except:
         return {}
 
     options = {}
@@ -102,22 +101,21 @@ def veganDiet(calories_wanted: 'int') -> {}:
     max = (calories_wanted // 4) + 20
 
     range = str(min) + '-' + str(max)
+    try:
+        response = requests.get(
+            url,
+            params={'q': '',                # Word filter, blank gets all.
+                    'calories': range,  # Calorie range, can also be an exact int.
+                    'health': 'vegan',      # Health is basically "diet type"
+                    'diet': 'balanced',     # Balanced makes sure the call gets real food.
+                    'from': 0,              # With queries that have many hits from - to
+                    'to': 20,               # returns the results in that range.
+                    'app_id': user,         
+                    'app_key': key}
+        )
 
-    response = requests.get(
-        url,
-        params={'q': '',                # Word filter, blank gets all.
-                'calories': range,  # Calorie range, can also be an exact int.
-                'health': 'vegan',      # Health is basically "diet type"
-                'diet': 'balanced',     # Balanced makes sure the call gets real food.
-                'from': 0,              # With queries that have many hits from - to
-                'to': 20,               # returns the results in that range.
-                'app_id': user,         
-                'app_key': key}
-    )
-
-    data = response.json()
-
-    if not data:
+        data = response.json()
+    except:
         return {}
 
     options = {}
@@ -135,6 +133,21 @@ def veganDiet(calories_wanted: 'int') -> {}:
     random_l = randomNums.pop()
     random_d = randomNums.pop()
     random_s = randomNums.pop()
+
+        #Remove blacklisted words
+    blacklist = ['recipes', 'recipe']
+    for blacklistedWord in blacklist:
+        options[random_b][0] = options[random_b][0].replace(blacklistedWord, '')
+        options[random_b][0] = options[random_b][0].title()
+
+        options[random_l][0] = options[random_l][0].replace(blacklistedWord, '')
+        options[random_l][0] = options[random_l][0].title()
+
+        options[random_d][0] = options[random_d][0].replace(blacklistedWord, '')
+        options[random_d][0] = options[random_d][0].title()
+
+        options[random_s][0] = options[random_s][0].replace(blacklistedWord, '')
+        options[random_s][0] = options[random_s][0].title()
 
     veganMeal = {
             'breakfast': {
@@ -166,23 +179,23 @@ def vegetarianDiet(calories_wanted: 'int') -> {}:
     max = (calories_wanted // 4) + 20
 
     range = str(min) + '-' + str(max)
+    try:
+        response = requests.get(
+            url,
+            params={'q': '',                # Word filter, blank gets all.
+                    'calories': range,  # Calorie range, can also be an exact int.
+                    'health': 'vegetarian',      # Health is basically "diet type"
+                    'diet': 'balanced',     # Balanced makes sure the call gets real food.
+                    'from': 0,              # With queries that have many hits from - to
+                    'to': 20,               # returns the results in that range.
+                    'app_id': user,         
+                    'app_key': key}
+        )
 
-    response = requests.get(
-        url,
-        params={'q': '',                # Word filter, blank gets all.
-                'calories': range,  # Calorie range, can also be an exact int.
-                'health': 'vegetarian',      # Health is basically "diet type"
-                'diet': 'balanced',     # Balanced makes sure the call gets real food.
-                'from': 0,              # With queries that have many hits from - to
-                'to': 20,               # returns the results in that range.
-                'app_id': user,         
-                'app_key': key}
-    )
-
-    data = response.json()
-
-    if not data:
+        data = response.json()
+    except:
         return {}
+        # no JSON returned
 
     options = {}
     index = 0
@@ -199,6 +212,21 @@ def vegetarianDiet(calories_wanted: 'int') -> {}:
     random_l = randomNums.pop()
     random_d = randomNums.pop()
     random_s = randomNums.pop()
+
+    #Remove blacklisted words
+    blacklist = ['recipes', 'recipe']
+    for blacklistedWord in blacklist:
+        options[random_b][0] = options[random_b][0].replace(blacklistedWord, '')
+        options[random_b][0] = options[random_b][0].title()
+
+        options[random_l][0] = options[random_l][0].replace(blacklistedWord, '')
+        options[random_l][0] = options[random_l][0].title()
+
+        options[random_d][0] = options[random_d][0].replace(blacklistedWord, '')
+        options[random_d][0] = options[random_d][0].title()
+
+        options[random_s][0] = options[random_s][0].replace(blacklistedWord, '')
+        options[random_s][0] = options[random_s][0].title()
 
     vegetarianMeal = {
             'breakfast': {
@@ -230,22 +258,21 @@ def paleoDiet(calories_wanted: 'int') -> {}:
     max = (calories_wanted // 4) + 20
 
     range = str(min) + '-' + str(max)
+    try:
+        response = requests.get(
+            url,
+            params={'q': '',                # Word filter, blank gets all.
+                    'calories': range,  # Calorie range, can also be an exact int.
+                    'health': 'paleo',      # Health is basically "diet type"
+                    'diet': 'balanced',     # Balanced makes sure the call gets real food.
+                    'from': 0,              # With queries that have many hits from - to
+                    'to': 20,               # returns the results in that range.
+                    'app_id': user,         
+                    'app_key': key}
+        )
 
-    response = requests.get(
-        url,
-        params={'q': '',                # Word filter, blank gets all.
-                'calories': range,  # Calorie range, can also be an exact int.
-                'health': 'paleo',      # Health is basically "diet type"
-                'diet': 'balanced',     # Balanced makes sure the call gets real food.
-                'from': 0,              # With queries that have many hits from - to
-                'to': 20,               # returns the results in that range.
-                'app_id': user,         
-                'app_key': key}
-    )
-
-    data = response.json()
-
-    if not data:
+        data = response.json()
+    except:
         return {}
 
     options = {}
@@ -263,6 +290,21 @@ def paleoDiet(calories_wanted: 'int') -> {}:
     random_l = randomNums.pop()
     random_d = randomNums.pop()
     random_s = randomNums.pop()
+
+    #Remove blacklisted words
+    blacklist = ['recipes', 'recipe']
+    for blacklistedWord in blacklist:
+        options[random_b][0] = options[random_b][0].replace(blacklistedWord, '')
+        options[random_b][0] = options[random_b][0].title()
+
+        options[random_l][0] = options[random_l][0].replace(blacklistedWord, '')
+        options[random_l][0] = options[random_l][0].title()
+
+        options[random_d][0] = options[random_d][0].replace(blacklistedWord, '')
+        options[random_d][0] = options[random_d][0].title()
+
+        options[random_s][0] = options[random_s][0].replace(blacklistedWord, '')
+        options[random_s][0] = options[random_s][0].title()
 
     paleoMeal = {
             'breakfast': {
@@ -294,22 +336,21 @@ def ketoDiet(calories_wanted: 'int') -> {}:
     max = (calories_wanted // 4) + 20
 
     range = str(min) + '-' + str(max)
+    try:
+        response = requests.get(
+            url,
+            params={'q': '',                # Word filter, blank gets all.
+                    'calories': range,  # Calorie range, can also be an exact int.
+                    #'health': 'paleo',      # Health is basically "diet type"
+                    'diet': 'low-carb',     # Balanced makes sure the call gets real food.
+                    'from': 0,              # With queries that have many hits from - to
+                    'to': 20,               # returns the results in that range.
+                    'app_id': user,         
+                    'app_key': key}
+        )
 
-    response = requests.get(
-        url,
-        params={'q': '',                # Word filter, blank gets all.
-                'calories': range,  # Calorie range, can also be an exact int.
-                #'health': 'paleo',      # Health is basically "diet type"
-                'diet': 'low-carb',     # Balanced makes sure the call gets real food.
-                'from': 0,              # With queries that have many hits from - to
-                'to': 20,               # returns the results in that range.
-                'app_id': user,         
-                'app_key': key}
-    )
-
-    data = response.json()
-
-    if not data:
+        data = response.json()
+    except:
         return {}
 
     options = {}
@@ -327,6 +368,21 @@ def ketoDiet(calories_wanted: 'int') -> {}:
     random_l = randomNums.pop()
     random_d = randomNums.pop()
     random_s = randomNums.pop()
+
+    #Remove blacklisted words
+    blacklist = ['recipes', 'recipe']
+    for blacklistedWord in blacklist:
+        options[random_b][0] = options[random_b][0].replace(blacklistedWord, '')
+        options[random_b][0] = options[random_b][0].title()
+
+        options[random_l][0] = options[random_l][0].replace(blacklistedWord, '')
+        options[random_l][0] = options[random_l][0].title()
+
+        options[random_d][0] = options[random_d][0].replace(blacklistedWord, '')
+        options[random_d][0] = options[random_d][0].title()
+
+        options[random_s][0] = options[random_s][0].replace(blacklistedWord, '')
+        options[random_s][0] = options[random_s][0].title()
 
     ketoMeal = {
             'breakfast': {
