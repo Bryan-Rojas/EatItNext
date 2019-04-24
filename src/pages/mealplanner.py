@@ -57,7 +57,7 @@ def anyDiet(calories_wanted: 'int') -> {}:
     random_s = randomNums.pop()
 
     #Remove blacklisted words
-    blacklist = ['recipes', 'recipe']
+    blacklist = ['recipes', 'recipe', 'Recipe', 'Recipes']
     for blacklistedWord in blacklist:
         options[random_b][0] = options[random_b][0].replace(blacklistedWord, '')
         options[random_b][0] = options[random_b][0].title()
