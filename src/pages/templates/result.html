@@ -7,8 +7,8 @@
         padding: 5px;
         margin-top: 10px;
         margin-bottom: 10px;
-        height: 80px;
-        width: 80px;
+        height: 120px;
+        width: 120px;
     }
     @media(max-width: 767px){
         .borderImage {
@@ -29,6 +29,15 @@
         width: 120px;
         }
     }
+
+    @media(min-width: 767px) and (max-width: 992px){
+        .mealPadding {
+            padding-left: 60px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
     .mealPadding {
         margin-top: 10px;
         margin-bottom: 10px;
@@ -56,11 +65,11 @@
                     <strong>Breakfast:</strong> <br/>
                         <div class="row">
                             <div class="col-md-2">
-                                <img class="borderImage" src="{{breakfast.image}}">
+                                <a href="{{breakfast.url}}" target="_blank"><img class="borderImage" src="{{breakfast.image}}"></a>
                             </div>
 
                             <div class="col-md-10 mealPadding">
-                                <strong>Item:</strong> {{breakfast.title}}<br/>
+                                <strong>Item:</strong> <a href="{{breakfast.url}}" target="_blank">{{breakfast.title}}</a><br/>
                                 <strong>Calories:</strong> {{breakfast.calories}}<br/>
                                 <strong>Fat:</strong> {{breakfast.fat}}g<br/>
                                 <strong>Carbs:</strong> {{breakfast.carbs}}g<br/>
@@ -72,11 +81,11 @@
                     <strong>Lunch:</strong> <br/>
                         <div class="row">
                             <div class="col-md-2">
-                                <img class="borderImage" src="{{lunch.image}}">
+                                <a href="{{lunch.url}}" target="_blank"><img class="borderImage" src="{{lunch.image}}"></a>
                             </div>
 
                             <div class="col-md-10 mealPadding">
-                                <strong>Item:</strong> {{lunch.title}}<br/>
+                                <strong>Item:</strong> <a href="{{lunch.url}}" target="_blank">{{lunch.title}}</a><br/>
                                 <strong>Calories:</strong> {{lunch.calories}}<br/>
                                 <strong>Fat:</strong> {{lunch.fat}}g<br/>
                                 <strong>Carbs:</strong> {{lunch.carbs}}g<br/>
@@ -88,11 +97,11 @@
                     <strong>Dinner:</strong> <br/>
                         <div class="row">
                             <div class="col-md-2">
-                                <img class="borderImage" src="{{dinner.image}}">
+                                <a href="{{dinner.url}}" target="_blank"><img class="borderImage" src="{{dinner.image}}"></a>
                             </div>
 
                             <div class="col-md-10 mealPadding">
-                                <strong>Item:</strong> {{dinner.title}}<br/>
+                                <strong>Item:</strong> <a href="{{dinner.url}}" target="_blank">{{dinner.title}}</a><br/>
                                 <strong>Calories:</strong> {{dinner.calories}}<br/>
                                 <strong>Fat:</strong> {{dinner.fat}}g<br/>
                                 <strong>Carbs:</strong> {{dinner.carbs}}g<br/>
@@ -104,11 +113,11 @@
                     <strong>Snack:</strong> <br/>
                         <div class="row">
                             <div class="col-md-2">
-                                <img class="borderImage" src="{{snack.image}}">
+                                <a href="{{snack.url}}" target="_blank"><img class="borderImage" src="{{snack.image}}"></a>
                             </div>
 
                             <div class="col-md-10 mealPadding">
-                                <strong>Item:</strong> {{snack.title}}<br/>
+                                <strong>Item:</strong> <a href="{{snack.url}}" target="_blank">{{snack.title}}</a><br/>
                                 <strong>Calories:</strong> {{snack.calories}}<br/>
                                 <strong>Fat:</strong> {{snack.fat}}g<br/>
                                 <strong>Carbs:</strong> {{snack.carbs}}g<br/>
