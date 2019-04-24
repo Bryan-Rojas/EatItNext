@@ -1,5 +1,17 @@
 <hr/>
 
+<style scoped>
+    .borderImage {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 80px;
+        width: 80px;
+    }
+</style>
+
 <div class="row">
         <div class="col-md-1">
         </div>
@@ -20,57 +32,53 @@
 
                     <strong>Breakfast:</strong> <br/>
                         <div class="row">
-                            <div class="col-md-1">
-                                <img src="{{breakfast.image}}" height="100" width="100" style=" border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+                            <div class="col-md-2">
+                                <img class="borderImage" src="{{breakfast.image}}">
                             </div>
 
-                            <div class="col-md-11">
-                                <ul>                
-                                    <li><strong>Item:</strong> {{breakfast.title}}</li>
-                                    <li><strong>Calories:</strong> {{breakfast.calories}}</li>
-                                </ul>
+                            <div class="col-md-10">
+                                <strong>Item:</strong> {{breakfast.title}}<br/>
+                                <strong>Calories:</strong> {{breakfast.calories}}<br/>
+                                <br/>
                             </div>
                         </div>
 
                     <strong>Lunch:</strong> <br/>
                         <div class="row">
-                            <div class="col-md-1">
-                                <img src="{{lunch.image}}" height="100" width="100" style=" border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+                            <div class="col-md-2">
+                                <img class="borderImage" src="{{lunch.image}}">
                             </div>
 
-                            <div class="col-md-11">
-                                <ul>                
-                                    <li><strong>Item:</strong> {{lunch.title}}</li>
-                                    <li><strong>Calories:</strong> {{lunch.calories}}</li>
-                                </ul>
+                            <div class="col-md-10">
+                                <strong>Item:</strong> {{lunch.title}}<br/>
+                                <strong>Calories:</strong> {{lunch.calories}}<br/>
+                                <br/>
                             </div>
                         </div>
 
                     <strong>Dinner:</strong> <br/>
                         <div class="row">
-                            <div class="col-md-1">
-                                <img src="{{dinner.image}}" height="100" width="100" style=" border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+                            <div class="col-md-2">
+                                <img class="borderImage" src="{{dinner.image}}">
                             </div>
 
-                            <div class="col-md-11">
-                                <ul>                
-                                    <li><strong>Item:</strong> {{dinner.title}}</li>
-                                    <li><strong>Calories:</strong> {{dinner.calories}}</li>
-                                </ul>
+                            <div class="col-md-10">
+                                <strong>Item:</strong> {{dinner.title}}<br/>
+                                <strong>Calories:</strong> {{dinner.calories}}<br/>
+                                <br/>
                             </div>
                         </div>
 
                     <strong>Snack:</strong> <br/>
                         <div class="row">
-                            <div class="col-md-1">
-                                <img src="{{snack.image}}" height="100" width="100" style=" border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+                            <div class="col-md-2">
+                                <img class="borderImage" src="{{snack.image}}">
                             </div>
 
-                            <div class="col-md-11">
-                                <ul>                
-                                    <li><strong>Item:</strong> {{snack.title}}</li>
-                                    <li><strong>Calories:</strong> {{snack.calories}}</li>
-                                </ul>
+                            <div class="col-md-10">
+                                <strong>Item:</strong> {{snack.title}}<br/>
+                                <strong>Calories:</strong> {{snack.calories}}<br/>
+                                <br/>
                             </div>
                         </div>
 
