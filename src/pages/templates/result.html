@@ -10,6 +10,29 @@
         height: 80px;
         width: 80px;
     }
+    @media(max-width: 767px){
+        .borderImage {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        margin-top: 10px;
+        }
+    }
+    @media(min-width: 992px){
+        .borderImage {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 120px;
+        width: 120px;
+        }
+    }
+    .mealPadding {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 </style>
 
 <div class="row">
@@ -36,12 +59,12 @@
                                 <img class="borderImage" src="{{breakfast.image}}">
                             </div>
 
-                            <div class="col-md-10">
+                            <div class="col-md-10 mealPadding">
                                 <strong>Item:</strong> {{breakfast.title}}<br/>
                                 <strong>Calories:</strong> {{breakfast.calories}}<br/>
-                                <strong>Fat:</strong> {{breakfast.fat}} g<br/>
-                                <strong>Carbs:</strong> {{breakfast.carbs}} g<br/>
-                                <strong>Protein:</strong> {{breakfast.protein}} g<br/>
+                                <strong>Fat:</strong> {{breakfast.fat}}g<br/>
+                                <strong>Carbs:</strong> {{breakfast.carbs}}g<br/>
+                                <strong>Protein:</strong> {{breakfast.protein}}g<br/>
                                 <br/>
                             </div>
                         </div>
@@ -52,12 +75,12 @@
                                 <img class="borderImage" src="{{lunch.image}}">
                             </div>
 
-                            <div class="col-md-10">
+                            <div class="col-md-10 mealPadding">
                                 <strong>Item:</strong> {{lunch.title}}<br/>
                                 <strong>Calories:</strong> {{lunch.calories}}<br/>
-                                <strong>Fat:</strong> {{lunch.fat}} g<br/>
-                                <strong>Carbs:</strong> {{lunch.carbs}} g<br/>
-                                <strong>Protein:</strong> {{lunch.protein}} g<br/>
+                                <strong>Fat:</strong> {{lunch.fat}}g<br/>
+                                <strong>Carbs:</strong> {{lunch.carbs}}g<br/>
+                                <strong>Protein:</strong> {{lunch.protein}}g<br/>
                                 <br/>
                             </div>
                         </div>
@@ -68,12 +91,12 @@
                                 <img class="borderImage" src="{{dinner.image}}">
                             </div>
 
-                            <div class="col-md-10">
+                            <div class="col-md-10 mealPadding">
                                 <strong>Item:</strong> {{dinner.title}}<br/>
                                 <strong>Calories:</strong> {{dinner.calories}}<br/>
-                                <strong>Fat:</strong> {{dinner.fat}} g<br/>
-                                <strong>Carbs:</strong> {{dinner.carbs}} g<br/>
-                                <strong>Protein:</strong> {{dinner.protein}} g<br/> 
+                                <strong>Fat:</strong> {{dinner.fat}}g<br/>
+                                <strong>Carbs:</strong> {{dinner.carbs}}g<br/>
+                                <strong>Protein:</strong> {{dinner.protein}}g<br/> 
                                 <br/>
                             </div>
                         </div>
@@ -84,12 +107,12 @@
                                 <img class="borderImage" src="{{snack.image}}">
                             </div>
 
-                            <div class="col-md-10">
+                            <div class="col-md-10 mealPadding">
                                 <strong>Item:</strong> {{snack.title}}<br/>
                                 <strong>Calories:</strong> {{snack.calories}}<br/>
-                                <strong>Fat:</strong> {{snack.fat}} g<br/>
-                                <strong>Carbs:</strong> {{snack.carbs}} g<br/>
-                                <strong>Protein:</strong> {{snack.protein}} g<br/>
+                                <strong>Fat:</strong> {{snack.fat}}g<br/>
+                                <strong>Carbs:</strong> {{snack.carbs}}g<br/>
+                                <strong>Protein:</strong> {{snack.protein}}g<br/>
                                 <br/>
                             </div>
                         </div>
