@@ -29,14 +29,15 @@ def anyDiet(calories_wanted: 'int') -> {}:
             params={'q': '',                # Word filter, blank gets all.
                     'calories': range,  # Calorie range, can also be an exact int.
                     #'health': 'paleo',      # Health is basically "diet type"
-                    'diet': 'balanced',     # Balanced makes sure the call gets real food.
+                    #'diet': 'balanced',     # Balanced makes sure the call gets real food
                     'from': 0,              # With queries that have many hits from - to
-                    'to': 40,               # returns the results in that range.
+                    'to': 99,               # returns the results in that range.
                     'app_id': user,         
                     'app_key': key}
         )
 
         data = response.json()
+
     except:
         return {}
 
