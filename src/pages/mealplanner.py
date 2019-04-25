@@ -19,8 +19,8 @@ def randomMealPlan(diet_type: 'string', calories_wanted: 'int') -> '{}':
     return mealPlanType[diet_type](calories_wanted)
 
 def anyDiet(calories_wanted: 'int') -> {}:
-    min = (calories_wanted // 4) - 20
-    max = (calories_wanted // 4) + 20
+    min = (calories_wanted // 4) - 40
+    max = (calories_wanted // 4) + 40
 
     range = str(min) + '-' + str(max)
     try:
@@ -336,7 +336,7 @@ def paleoDiet(calories_wanted: 'int') -> {}:
             url,
             params={'q': '',                # Word filter, blank gets all.
                     'calories': range,  # Calorie range, can also be an exact int.
-                    'health': 'paleo',      # Health is basically "diet type"
+                    'healthLabels': 'paleo',      # Health is basically "diet type"
                     'diet': 'balanced',     # Balanced makes sure the call gets real food.
                     'from': 0,              # With queries that have many hits from - to
                     'to': 20,               # returns the results in that range.
