@@ -6,6 +6,8 @@ import json
 url = 'https://api.edamam.com/search'
 user = '97a59ced'
 key = '5fed61ed8cfad28dafda078fd8a9a2a9'
+user_backup = 'bdab43a2'
+key_backup = '2940c6448f190b0c7a2b8273140711cc'
 
 def randomMealPlan(diet_type: 'string', calories_wanted: 'int') -> '{}':
     mealPlanType = {
@@ -35,10 +37,24 @@ def anyDiet(calories_wanted: 'int') -> {}:
                     'app_id': user,         
                     'app_key': key}
         )
-
         data = response.json()
     except:
-        return {}
+        try:
+            response = requests.get(
+                url,
+                params={'q': '',                # Word filter, blank gets all.
+                        'calories': range,  # Calorie range, can also be an exact int.
+                        #'health': 'paleo',      # Health is basically "diet type"
+                        'diet': 'balanced',     # Balanced makes sure the call gets real food
+                        'from': 20,              # With queries that have many hits from - to
+                        'to': 60,               # returns the results in that range.
+                        'app_id': user_backup,         
+                        'app_key': key_backup}
+            )
+
+            data = response.json()
+        except:
+            return {}
 
     options = {}
     index = 0
@@ -134,14 +150,28 @@ def veganDiet(calories_wanted: 'int') -> {}:
                     'health': 'vegan',      # Health is basically "diet type"
                     'diet': 'balanced',     # Balanced makes sure the call gets real food.
                     'from': 0,              # With queries that have many hits from - to
-                    'to': 20,               # returns the results in that range.
+                    'to': 40,               # returns the results in that range.
                     'app_id': user,         
                     'app_key': key}
         )
 
         data = response.json()
     except:
-        return {}
+        try:
+            response = requests.get(
+                url,
+                params={'q': '',                # Word filter, blank gets all.
+                    'calories': range,  # Calorie range, can also be an exact int.
+                    'health': 'vegan',      # Health is basically "diet type"
+                    'diet': 'balanced',     # Balanced makes sure the call gets real food.
+                    'from': 20,              # With queries that have many hits from - to
+                    'to': 60,               # returns the results in that range.
+                    'app_id': user_backup,         
+                    'app_key': key_backup}
+        )
+            data = response.json()
+        except:
+            return {}
 
     options = {}
     index = 0
@@ -236,14 +266,28 @@ def vegetarianDiet(calories_wanted: 'int') -> {}:
                     'health': 'vegetarian',      # Health is basically "diet type"
                     'diet': 'balanced',     # Balanced makes sure the call gets real food.
                     'from': 0,              # With queries that have many hits from - to
-                    'to': 20,               # returns the results in that range.
+                    'to': 40,               # returns the results in that range.
                     'app_id': user,         
                     'app_key': key}
         )
 
         data = response.json()
     except:
-        return {}
+        try:
+            response = requests.get(
+                url,
+                params={'q': '',                # Word filter, blank gets all.
+                    'calories': range,  # Calorie range, can also be an exact int.
+                    'health': 'vegetarian',      # Health is basically "diet type"
+                    'diet': 'balanced',     # Balanced makes sure the call gets real food.
+                    'from': 20,              # With queries that have many hits from - to
+                    'to': 60,               # returns the results in that range.
+                    'app_id': user_backup,         
+                    'app_key': key_backup}
+        )
+            data = response.json()
+        except:
+            return {}
         # no JSON returned
 
     options = {}
@@ -346,7 +390,22 @@ def paleoDiet(calories_wanted: 'int') -> {}:
 
         data = response.json()
     except:
-        return {}
+        try:
+            response = requests.get(
+                url,
+                params={'q': '',                # Word filter, blank gets all.
+                        'calories': range,  # Calorie range, can also be an exact int.
+                        'healthLabels': 'paleo',      # Health is basically "diet type"
+                        'diet': 'balanced',     # Balanced makes sure the call gets real food.
+                        'from': 30,              # With queries that have many hits from - to
+                        'to': 60,               # returns the results in that range.
+                        'app_id': user_backup,         
+                        'app_key': key_backup}
+            )
+
+            data = response.json()
+        except:
+            return {}
 
     options = {}
     index = 0
@@ -448,7 +507,22 @@ def ketoDiet(calories_wanted: 'int') -> {}:
 
         data = response.json()
     except:
-        return {}
+        try:
+            response = requests.get(
+                url,
+                params={'q': '',                # Word filter, blank gets all.
+                        'calories': range,  # Calorie range, can also be an exact int.
+                        #'health': 'paleo',      # Health is basically "diet type"
+                        'diet': 'low-carb',     # Balanced makes sure the call gets real food.
+                        'from': 30,              # With queries that have many hits from - to
+                        'to': 60,               # returns the results in that range.
+                        'app_id': user_backup,         
+                        'app_key': key_backup}
+            )
+
+            data = response.json()
+        except:
+            return {}
 
     options = {}
     index = 0
