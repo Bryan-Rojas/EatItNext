@@ -16,7 +16,7 @@ def randomMealPlan(diet_type: 'string', calories_wanted: 'int') -> '{}':
         'Ketogenic': ketoDiet,
     }
 
-    return mealPlanType[diet_type](calories_wanted)
+    return mealPlanType[diet_type](calories_wanted) #return veganDiet(calories_wanted)
 
 def anyDiet(calories_wanted: 'int') -> {}:
     min = (calories_wanted // 4) - 40
@@ -29,15 +29,14 @@ def anyDiet(calories_wanted: 'int') -> {}:
             params={'q': '',                # Word filter, blank gets all.
                     'calories': range,  # Calorie range, can also be an exact int.
                     #'health': 'paleo',      # Health is basically "diet type"
-                    #'diet': 'balanced',     # Balanced makes sure the call gets real food
+                    'diet': 'balanced',     # Balanced makes sure the call gets real food
                     'from': 0,              # With queries that have many hits from - to
-                    'to': 99,               # returns the results in that range.
+                    'to': 40,               # returns the results in that range.
                     'app_id': user,         
                     'app_key': key}
         )
 
         data = response.json()
-
     except:
         return {}
 
@@ -123,8 +122,8 @@ def anyDiet(calories_wanted: 'int') -> {}:
     return anyMeal
 
 def veganDiet(calories_wanted: 'int') -> {}:
-    min = (calories_wanted // 4) - 20
-    max = (calories_wanted // 4) + 20
+    min = (calories_wanted // 4) - 40
+    max = (calories_wanted // 4) + 40
 
     range = str(min) + '-' + str(max)
     try:
@@ -225,8 +224,8 @@ def veganDiet(calories_wanted: 'int') -> {}:
     return veganMeal
 
 def vegetarianDiet(calories_wanted: 'int') -> {}:
-    min = (calories_wanted // 4) - 20
-    max = (calories_wanted // 4) + 20
+    min = (calories_wanted // 4) - 40
+    max = (calories_wanted // 4) + 40
 
     range = str(min) + '-' + str(max)
     try:
@@ -328,8 +327,8 @@ def vegetarianDiet(calories_wanted: 'int') -> {}:
     return vegetarianMeal
 
 def paleoDiet(calories_wanted: 'int') -> {}:
-    min = (calories_wanted // 4) - 20
-    max = (calories_wanted // 4) + 20
+    min = (calories_wanted // 4) - 40
+    max = (calories_wanted // 4) + 40
 
     range = str(min) + '-' + str(max)
     try:
@@ -430,8 +429,8 @@ def paleoDiet(calories_wanted: 'int') -> {}:
     return paleoMeal
 
 def ketoDiet(calories_wanted: 'int') -> {}:
-    min = (calories_wanted // 4) - 20
-    max = (calories_wanted // 4) + 20
+    min = (calories_wanted // 4) - 40
+    max = (calories_wanted // 4) + 40
 
     range = str(min) + '-' + str(max)
     try:
