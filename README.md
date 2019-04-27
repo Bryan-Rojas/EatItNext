@@ -5,12 +5,16 @@ Introduction to software engineering project using Django. Our project is aimed 
 * Fix Bootstrap JavaScript CDN Issue
 * Fix Radio Buttons
 * Add Content
+* Add SMS Button or Print Button
 * Create contact@eatitnext.com mail
-* Work on Meal Plan Algorithm
 * Calorie Calculator Algorithm Validation
 * Add Screen Reader skip
 * Accessibility
-* Switch from EB to EC2 Ubuntu instance
+* Add Https SSL certificate
+* Update preview
+* Update README.md for running your own instance
+* Add Logo
+* Update form UI
 
 ## Preview
 
