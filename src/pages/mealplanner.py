@@ -74,7 +74,10 @@ def anyDiet(calories_wanted: 'int') -> {}:
 
     randomNums = set()
     while len(randomNums) is not 4:
-        randomNums.add(randint(0, len(options) - 1))
+        try:
+            randomNums.add(randint(0, len(options) - 1))
+        except:
+            return {}
 
     random_b = randomNums.pop()
     random_l = randomNums.pop()
