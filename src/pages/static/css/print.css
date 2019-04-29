@@ -1,0 +1,16 @@
+@media print{
+    footer, hr, img{
+        display: none;
+    }
+    #welcomemsg{
+        display: none;
+    }
+    #mealplannerform{
+        display: none;
+    }
+}
+
+button{
+    background: none;
+    border: none;
+}

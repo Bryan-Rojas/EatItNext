@@ -1,0 +1,3 @@
+function printMealPlan(){
+    window.print();
+}
