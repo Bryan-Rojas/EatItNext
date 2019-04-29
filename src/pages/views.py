@@ -25,13 +25,14 @@ class HomePageView(TemplateView):
             diet = form.cleaned_data['diet']
             calories = form.cleaned_data['calories']
 
-        args = randomMealPlan(str(diet), int(calories))
+        args = {}
         args['form'] = form
         args['null'] = False
         args['diet'] = diet
         args['calories_wanted'] = calories
         if calories >= 800 and calories <= 5200:
             args['valid'] = True
+            args = randomMealPlan(str(diet), int(calories))
         else:
             args['valid'] = False
             args['calories_invalid'] = True
