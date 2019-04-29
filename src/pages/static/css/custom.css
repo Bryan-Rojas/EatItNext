@@ -94,3 +94,10 @@ footer{
         width: 100%;
     }
 }
+
+input, select{
+    margin-left: 5px;
+    border-radius: 3px;
+    border: none;
+    border: 1px solid #007bff;
+}
