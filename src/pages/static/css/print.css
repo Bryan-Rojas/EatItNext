@@ -1,5 +1,5 @@
 @media print{
-    footer, hr, img{
+    footer, hr{
         display: none;
     }
     #welcomemsg{
