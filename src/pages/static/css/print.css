@@ -8,6 +8,9 @@
     #mealplannerform{
         display: none;
     }
+    .fa-print{
+        display: none;
+    }
 }
 
 button{
