@@ -539,10 +539,6 @@ def ketoDiet(calories_wanted: 'int') -> {}:
     options = {}
     index = 0
 
-    with open("data.json","w") as f:
-        json.dump(data, f)
-    
-
     for x in data['hits']:
         options[index] = [
             x['recipe']['label'], 
