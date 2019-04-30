@@ -509,10 +509,10 @@ def ketoDiet(calories_wanted: 'int') -> {}:
             url,
             params={'q': '',                # Word filter, blank gets all.
                     'calories': range,  # Calorie range, can also be an exact int.
-                    #'health': 'paleo',      # Health is basically "diet type"
+                    'health': 'balanced',      # Health is basically "diet type"
                     'diet': 'low-carb',     # Balanced makes sure the call gets real food.
                     'from': 0,              # With queries that have many hits from - to
-                    'to': 20,               # returns the results in that range.
+                    'to': 30,               # returns the results in that range.
                     'app_id': user,         
                     'app_key': key}
         )
@@ -538,6 +538,10 @@ def ketoDiet(calories_wanted: 'int') -> {}:
 
     options = {}
     index = 0
+
+    with open("data.json","w") as f:
+        json.dump(data, f)
+    
 
     for x in data['hits']:
         options[index] = [
