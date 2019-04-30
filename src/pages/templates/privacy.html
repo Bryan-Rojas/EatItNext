@@ -1,5 +1,45 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<strong>PRIVACY STUFF...</strong>
+
+<style>
+h3{
+    font-size: 1.2em;
+}
+p{
+    line-height: 1.6em;
+}
+</style>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Privacy Policy</h2><br/>
+
+        <h3>Overview</h3></br>
+            <p>
+            TL;DR: We don't store your data at the moment. We only temporarily use it for our meal planner algorithm.
+            </p><br/>
+
+        <h3>Types of Information We Receive from You, How We Get It, & How We Use It</h3></br>
+            <p>
+            The information we receive is your diet preference and calories desired for your meal plan.<br/>
+            We gather this data through a POST request with the information given in the input fields.<br/>
+            We use this data and use our meal planning algorithm to generate a meal plan based on your desired preferences.<br/>
+            </p><br/>
+
+        <h3>When May We Share Your Information</h3></br>
+            <p>
+            At the moment we do not share any of our user's data.
+            </p><br/>
+
+
+        <h3>How Long Do We Keep Your Data?</h3></br>
+            <p>
+            We only keep a user's data temporarily for our meal planner algorithm.
+            </p><br/>
+
+    </div>
+</div>
+
+
 {% endblock content %}
