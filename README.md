@@ -15,6 +15,8 @@ Introduction to software engineering project using Django. Our project is aimed 
 * Update README.md for running your own instance
 * Add Logo
 * Update form UI
+* Keto issue at 5200 calories
+* 10+ query calls 
 
 ## Preview
 
