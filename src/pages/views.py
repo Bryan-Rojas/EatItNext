@@ -38,8 +38,8 @@ class HomePageView(TemplateView):
 
         return render(request, self.template_name, args)
 
-class BlogView(TemplateView):
-    template_name = 'blog.html'
+class MeetTheTeamView(TemplateView):
+    template_name = 'team.html'
 
 class AboutUsView(TemplateView):
     template_name = 'about-us.html'

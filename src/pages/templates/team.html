@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<style>
+h3{
+    font-size: 1.2em;
+    font-weight: 625;
+}
+p{
+    line-height: 1.6em;
+}
+</style>
+
+<style scoped>
+    .borderImage {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 150px;
+        width: 150px;
+    }
+    @media(max-width: 767px){
+        .borderImage {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        margin-top: 10px;
+        }
+    }
+    @media(min-width: 992px){
+        .borderImage {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 150px;
+        width: 150px;
+        }
+    }
+
+    @media(min-width: 767px) and (max-width: 992px){
+        .mealPadding {
+            padding-left: 60px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .mealPadding {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Meet the Team </h2><br/>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <center>
+            <img class="borderImage" src="{% static 'img/profile.png' %}" alt="Bryan Rojas"><br/>
+            Bryan Rojas<br/>
+            (Team Lead)<br/><br/>
+        </center>
+    </div>
+
+    <div class="col-md-3">
+        <center>
+            <img class="borderImage" src="{% static 'img/profile.png' %}" alt="Steven Johnson"><br/>
+            Steven Johnson<br/><br/>
+        </center>
+    </div>
+
+    <div class="col-md-3">
+        <center>
+            <img class="borderImage" src="{% static 'img/profile.png' %}" alt="Shivam Gupta"><br/>
+            Shivam Gupta<br/><br/>
+        </center>
+    </div>
+
+    <div class="col-md-3">
+        <center>
+            <img class="borderImage" src="{% static 'img/profile.png' %}" alt="Priyanshi"><br/>
+            Priyanshi<br/>
+        </center>
+    </div>
+</div>
+
+{% endblock content %}
