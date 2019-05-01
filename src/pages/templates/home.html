@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+
     <center id="welcomemsg">
         <h2>Welcome!</h2>
 
@@ -23,15 +25,15 @@
                 <div class="card-body">
 
                 {% if valid == False %}
-                    <span style="color: red;">
+
+                <div class="alert alert-danger" role="alert">
                     <strong>Errors:</strong><br/>
-                    <ul>
-                    {% if calories_invalid == True %}
-                    <li>Invalid amount of calories, please choose a value between 800 to 5200 calories.</li>
-                    {% endif %}
-                    </ul>
-                    </span>
-                    <br/>
+                        <ul>
+                        {% if calories_invalid == True %}
+                        <li>Invalid amount of calories, please choose a value between <strong>800</strong> to <strong>5200</strong> calories.</li>
+                        {% endif %}
+                        </ul>
+                </div>
                 {% endif %}
 
                     <form method="post">
