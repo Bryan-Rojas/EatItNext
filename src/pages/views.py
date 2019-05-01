@@ -47,9 +47,6 @@ class AboutUsView(TemplateView):
 class CreditsView(TemplateView):
     template_name = 'credits.html'
 
-class ProjectDocumentView(TemplateView):
-    template_name = 'project-docs.html'
-
 class LegalView(TemplateView):
     template_name = 'legal.html'
 
