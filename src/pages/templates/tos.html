@@ -1,5 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<strong>TOS...</strong>
+<style>
+h3{
+    font-size: 1.2em;
+    font-weight: 625;
+}
+p{
+    line-height: 1.6em;
+}
+</style>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Terms of Service</h2><br/>
+            <p>
+                Eat It Next strongly believes in protecting the user’s privacy. 
+                Eat It Next has therefore adopted a Privacy Policy. 
+                Users of this Web site should refer to Eat It Next’s <a class="footer-link" href="{% url 'privacy-policy' %}">Privacy Policy</a>, 
+                before providing any information. 
+            </p>
+
+    </div>
+</div>
 {% endblock content %}
