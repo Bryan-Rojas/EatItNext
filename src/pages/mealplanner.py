@@ -135,6 +135,12 @@ def anyDiet(calories_wanted: 'int') -> {}:
                 'carbs': int(options[random_s][4]),
                 'protein': int(options[random_s][5]),
                 'url': options[random_s][6]
+            },
+            'total': {
+                'calories': int(options[random_b][1]+options[random_l][1]+options[random_d][1]+options[random_s][1]),
+                'fat': int(options[random_b][3]+options[random_l][3]+options[random_d][3]+options[random_s][3]),
+                'carbs': int(options[random_b][4]+options[random_l][4]+options[random_d][4]+options[random_s][4]),
+                'protein': int(options[random_b][5]+options[random_l][5]+options[random_d][5]+options[random_s][5])
             }
     }
     
@@ -254,6 +260,12 @@ def veganDiet(calories_wanted: 'int') -> {}:
                 'carbs': int(options[random_s][4]),
                 'protein': int(options[random_s][5]),
                 'url': options[random_s][6]
+            },
+            'total': {
+                'calories': int(options[random_b][1]+options[random_l][1]+options[random_d][1]+options[random_s][1]),
+                'fat': int(options[random_b][3]+options[random_l][3]+options[random_d][3]+options[random_s][3]),
+                'carbs': int(options[random_b][4]+options[random_l][4]+options[random_d][4]+options[random_s][4]),
+                'protein': int(options[random_b][5]+options[random_l][5]+options[random_d][5]+options[random_s][5])
             }
     }
     
@@ -374,6 +386,12 @@ def vegetarianDiet(calories_wanted: 'int') -> {}:
                 'carbs': int(options[random_s][4]),
                 'protein': int(options[random_s][5]),
                 'url': options[random_s][6]
+            },
+            'total': {
+                'calories': int(options[random_b][1]+options[random_l][1]+options[random_d][1]+options[random_s][1]),
+                'fat': int(options[random_b][3]+options[random_l][3]+options[random_d][3]+options[random_s][3]),
+                'carbs': int(options[random_b][4]+options[random_l][4]+options[random_d][4]+options[random_s][4]),
+                'protein': int(options[random_b][5]+options[random_l][5]+options[random_d][5]+options[random_s][5])
             }
     }
     
@@ -494,6 +512,12 @@ def paleoDiet(calories_wanted: 'int') -> {}:
                 'carbs': int(options[random_s][4]),
                 'protein': int(options[random_s][5]),
                 'url': options[random_s][6]
+            },
+            'total': {
+                'calories': int(options[random_b][1]+options[random_l][1]+options[random_d][1]+options[random_s][1]),
+                'fat': int(options[random_b][3]+options[random_l][3]+options[random_d][3]+options[random_s][3]),
+                'carbs': int(options[random_b][4]+options[random_l][4]+options[random_d][4]+options[random_s][4]),
+                'protein': int(options[random_b][5]+options[random_l][5]+options[random_d][5]+options[random_s][5])
             }
     }
     
@@ -614,6 +638,12 @@ def ketoDiet(calories_wanted: 'int') -> {}:
                 'carbs': int(options[random_s][4]),
                 'protein': int(options[random_s][5]),
                 'url': options[random_s][6]
+            },
+            'total': {
+                'calories': int(options[random_b][1]+options[random_l][1]+options[random_d][1]+options[random_s][1]),
+                'fat': int(options[random_b][3]+options[random_l][3]+options[random_d][3]+options[random_s][3]),
+                'carbs': int(options[random_b][4]+options[random_l][4]+options[random_d][4]+options[random_s][4]),
+                'protein': int(options[random_b][5]+options[random_l][5]+options[random_d][5]+options[random_s][5])
             }
     }
     
