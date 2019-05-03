@@ -4,19 +4,9 @@ Introduction to software engineering project using Django. Our project is aimed 
 ## To-do List
 * Fix Bootstrap JavaScript CDN Issue
 * Fix Radio Buttons
-* Add Content
-* Add SMS Button or Print Button
-* Create contact@eatitnext.com mail
-* Calorie Calculator Algorithm Validation
 * Add Screen Reader skip
-* Accessibility
-* Add Https SSL certificate
 * Update preview
 * Update README.md for running your own instance
-* Add Logo
-* Update form UI
-* Keto issue at 5200 calories
-* 10+ query calls 
 
 ## Preview
 
