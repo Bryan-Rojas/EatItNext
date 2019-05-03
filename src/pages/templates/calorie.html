@@ -13,6 +13,33 @@
 
             <div class="card-body">
 
+                {% if valid == False %}
+
+                    <div class="alert alert-danger" role="alert">
+                        <strong>Errors:</strong><br/>
+                            <ul>
+
+                            {% if valid_age == False %}
+                            <li>Invalid amount entered for <strong>age</strong> please enter an age between <strong>10</strong> to <strong>110</strong>.</li>
+                            {% endif %}
+
+                            {% if valid_weight == False %}
+                            <li>Invalid amount entered for <strong>weight</strong> please enter a weight between <strong>20</strong> to <strong>800</strong>.</li>
+                            {% endif %}
+
+                            {% if valid_height_ft == False %}
+                            <li>Invalid amount entered for <strong>height (ft)</strong> please enter a height (ft) between <strong>1</strong> to <strong>9</strong>.</li>
+                            {% endif %}
+
+                            {% if valid_height_in == False %}
+                            <li>Invalid amount entered for <strong>height (in)</strong> please enter a height (in) between <strong>0</strong> to <strong>11</strong>.</li>
+                            {% endif %}
+
+                            </ul>
+                    </div>
+
+                {% endif %}
+
                     <strong>Our calorie form does not currently support kg/cm.<br/><br/></strong>
                     <form method="post">
                         {% csrf_token %}
@@ -40,7 +67,7 @@
 -->
 
 
-        {% if null != True %}
+        {% if null != True and valid == True %}
             {% include "cal-result.html" %}
         {% endif %}
 {% endblock content %}

@@ -81,12 +81,34 @@ class CalorieCalcView(TemplateView):
 
         args = {}
 
-        #make function dummie
+        if age >= 10 and age <= 110:
+            args['valid_age'] = True
+        else:
+            args['valid_age'] = False
+
         if weight >= 20 and weight <= 800:
+            args['valid_weight'] = True
+        else:
+            args['valid_weight'] = False
+
+        if height_ft <= 9 and height_ft >= 1:
+            args['valid_height_ft'] = True
+        else:
+            args['valid_height_ft'] = False
+
+        if height_in >= 0 and height_in <= 11:
+            args['valid_height_in'] = True
+        else:
+            args['valid_height_in'] = False
+
+        if args['valid_age'] and args['valid_weight'] and args['valid_height_ft'] and args['valid_height_in']:
             args['valid'] = True
-            args = calorieCalulator(int(age), str(gender), int(weight), int(height_ft), int(height_in), str(exercise_level), str(goal))
         else:
             args['valid'] = False
+
+        if args['valid']:
+            args = calorieCalulator(int(age), str(gender), int(weight), int(height_ft), int(height_in), str(exercise_level), str(goal))
+            args['valid'] = True
 
         #age, gender, weight, height_ft, height_in, activity_level, goal
         #args = calorieCalulator(int(age), str(gender), int(weight), int(height_ft), int(height_in), str(exercise_level), str(goal))
