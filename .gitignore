@@ -16,3 +16,7 @@ eb-virt/
 src/static
 
 web.config
+src/.DS_Store
+.DS_Store
+
+src/pages/migrations
