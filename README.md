@@ -1,6 +1,6 @@
 # EatItNext
 
-Live Demo: [eatitnext.com](http://eatitnext.com/)
+Live Demo: [eatitnext.com](http://eatitnext.com/) - NO LONGER LIVE :/ too much $$$ for hosting
 
 Introduction to software engineering project using Django. Our project is aimed towards developing an accessible website where users can generate a meal plan for the day based on their dietary preference.
 
